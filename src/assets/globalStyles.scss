@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500;900&family=Roboto:wght@300;400;500;900&display=swap");
+
+// fonts
+$ff: "Roboto", sans-serif;
+$ff-header: "Gothic A1", sans-serif;
+
+// colors
+$main-background: rgb(252, 244, 233);
+
+$creme1: rgb(244, 240, 231);
+$creme2: rgb(234, 229, 220);
+$creme3: rgb(224, 219, 204);
+$green1: rgb(190, 214, 175);
+$green2: rgb(171, 202, 150);
+$green3: rgb(164, 187, 128);
+$green4: rgb(136, 156, 104);
+$header-color: rgb(87, 87, 87);
+$body-color: rgb(100, 100, 100);
+
+// mixins
+@mixin mobile-end {
+  @media only screen and (min-width: 499px) {
+    @content;
+  }
+}
+@mixin tablet-end {
+  @media only screen and (min-width: 850px) {
+    @content;
+  }
+}
+@mixin desktop-enter {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop-large {
+  @media only screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+body {
+  background-color: $main-background;
+  height: 100vh;
+  // transform: scale(0.2);
+  #app {
+    width: 100%;
+    min-height: 100vh;
+    font-family: $ff;
+    // background-color: $main-background;
+    overflow: hidden;
+  }
+}
