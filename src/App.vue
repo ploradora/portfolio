@@ -56,7 +56,7 @@ header {
   height: 100vh;
   @include mobile-end {
     margin-left: auto;
-    width: calc(100% - 70px);
+    width: calc(100% - 72px);
   }
   @include desktop-large {
     margin: unset;
@@ -68,15 +68,17 @@ header {
 main {
   @include mobile-end {
     margin-left: auto;
-    width: calc(100% - 70px);
+    width: calc(100% - 72px);
   }
   @include desktop-enter {
-    margin-left: unset;
-    margin: auto;
+    // margin-left: unset;
+    // margin: auto;
     // width: ;
   }
   @include desktop-large {
-    
+    margin: auto;
+    width: 100%;
+    max-width: 1700px;
   }
 }
 </style>

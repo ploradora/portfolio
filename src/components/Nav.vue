@@ -87,11 +87,12 @@ nav {
       border: unset;
       background-color: unset;
       font-family: $ff;
+      font-weight: 500;
       font-size: 14px;
       padding: 5px 12px 15px 12px;
       opacity: 0;
       transform: translateY(-40px);
-      color: darken($header-color, 15%);
+      color: $header-color;
       transition: color 0.2s linear;
       cursor: pointer;
       &:after {
@@ -104,7 +105,7 @@ nav {
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background-color: blue;
+        background-color: $blue;
       }
       &:hover {
         &::after {
@@ -143,7 +144,7 @@ nav {
           width: 5px;
           height: 5px;
           border-radius: 50%;
-          background-color: blue;
+          background-color: $blue;
         }
         &:hover {
           &::after {
