@@ -29,7 +29,11 @@
         </p>
       </article>
       <div class="journal-container">
-        <a class="journal-link" href="">
+        <a
+          target="_blank"
+          class="journal-link"
+          href="https://journal-by-sebastian.netlify.app/"
+        >
           <img
             src="../assets/images/project-ss/journal-ss.png"
             alt="journal app screen shot"
@@ -37,10 +41,14 @@
         </a>
         <div class="buttons">
           <button>
-            <a href="">Project</a>
+            <a target="_blank" href="https://journal-by-sebastian.netlify.app/"
+              >Project</a
+            >
           </button>
           <button>
-            <a href="">GitHub</a>
+            <a target="_blank" href="https://github.com/ploradora/Journal"
+              >GitHub</a
+            >
           </button>
         </div>
       </div>
@@ -61,7 +69,10 @@
       </article>
       <div class="projects-grid">
         <div class="project-container">
-          <a target="_blank" href="">
+          <a
+            target="_blank"
+            href="https://ecommerce-product-page-main-p7.netlify.app/"
+          >
             <img
               src="../assets/images/project-ss/ecommerce-mobile.jpg"
               alt="shoe e-commerce project screenshot"
@@ -69,15 +80,26 @@
           </a>
           <div class="buttons">
             <button>
-              <a href="">Project</a>
+              <a
+                target="_blank"
+                href="https://ecommerce-product-page-main-p7.netlify.app/"
+                >Project</a
+              >
             </button>
             <button>
-              <a href="">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/ploradora/vue-project-7"
+                >GitHub</a
+              >
             </button>
           </div>
         </div>
         <div class="project-container">
-          <a target="_blank" href="">
+          <a
+            target="_blank"
+            href="https://tip-calculator-app-sebastian.netlify.app/"
+          >
             <img
               src="../assets/images/project-ss/tip-mobile.jpg"
               alt="tip calculator project screenshot"
@@ -85,15 +107,23 @@
           </a>
           <div class="buttons">
             <button>
-              <a href="">Project</a>
+              <a
+                target="_blank"
+                href="https://tip-calculator-app-sebastian.netlify.app/"
+                >Project</a
+              >
             </button>
             <button>
-              <a href="">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/ploradora/tip-calculator-app"
+                >GitHub</a
+              >
             </button>
           </div>
         </div>
         <div class="project-container">
-          <a target="_blank" href="">
+          <a target="_blank" href="https://todo-app-p9.netlify.app/">
             <img
               src="../assets/images/project-ss/todo-mobile.jpg"
               alt="to do project screenshot"
@@ -101,15 +131,24 @@
           </a>
           <div class="buttons">
             <button>
-              <a href="">Project</a>
+              <a target="_blank" href="https://todo-app-p9.netlify.app/"
+                >Project</a
+              >
             </button>
             <button>
-              <a href="">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/ploradora/vue-project-9"
+                >GitHub</a
+              >
             </button>
           </div>
         </div>
         <div class="project-container">
-          <a target="_blank" href="">
+          <a
+            target="_blank"
+            href="https://time-tracking-dashboard-p5.netlify.app/"
+          >
             <img
               src="../assets/images/project-ss/tracking-mobile.jpg"
               alt="time tracking website project screenshot"
@@ -117,15 +156,26 @@
           </a>
           <div class="buttons">
             <button>
-              <a href="">Project</a>
+              <a
+                target="_blank"
+                href="https://time-tracking-dashboard-p5.netlify.app/"
+                >Project</a
+              >
             </button>
             <button>
-              <a href="">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/ploradora/vue-project-5"
+                >GitHub</a
+              >
             </button>
           </div>
         </div>
         <div class="project-container">
-          <a target="_blank" href="">
+          <a
+            target="_blank"
+            href="https://space-tourism-website-main-p8.netlify.app/"
+          >
             <img
               src="../assets/images/project-ss/space-mobile.jpg"
               alt="space website project screenshot"
@@ -133,15 +183,26 @@
           </a>
           <div class="buttons">
             <button>
-              <a href="">Project</a>
+              <a
+                target="_blank"
+                href="https://space-tourism-website-main-p8.netlify.app/"
+                >Project</a
+              >
             </button>
             <button>
-              <a href="">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/ploradora/vue-project-8"
+                >GitHub</a
+              >
             </button>
           </div>
         </div>
         <div class="project-container">
-          <a target="_blank" href="">
+          <a
+            target="_blank"
+            href="https://room-homepage-slider-p6.netlify.app/"
+          >
             <img
               src="../assets/images/project-ss/furniture-mobile.jpg"
               alt="furniture website project screenshot"
@@ -149,10 +210,18 @@
           </a>
           <div class="buttons">
             <button>
-              <a href="">Project</a>
+              <a
+                target="_blank"
+                href="https://room-homepage-slider-p6.netlify.app/"
+                >Project</a
+              >
             </button>
             <button>
-              <a href="">GitHub</a>
+              <a
+                target="_blank"
+                href="https://github.com/ploradora/vue-project-6"
+                >GitHub</a
+              >
             </button>
           </div>
         </div>
@@ -204,13 +273,16 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+
 export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+  },
   computed: {},
-  Mounted() {},
+  mounted() {},
 };
 </script>
 
@@ -412,7 +484,7 @@ section {
     .p-drawings {
       margin: auto;
       margin-top: 20px;
-      padding-bottom: 680px;
+      padding-bottom: 700px;
       width: 90%;
       max-width: 380px;
       text-align: center;
@@ -421,6 +493,7 @@ section {
       position: absolute;
       bottom: 0;
       left: 0;
+      right: 0;
       width: 100%;
       height: 671px;
       overflow-y: hidden;
@@ -429,14 +502,37 @@ section {
         background-color: $main-background;
         height: 5px;
       }
+      &::-webkit-scrollbar-track {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
       &::-webkit-scrollbar-thumb {
-        background-color: $main-color;
-        margin-left: 30px;
+        background-color: lighten($main-color, 20%);
         border-radius: 20px;
         &:hover {
-          background-color: darken($main-color, 20%);
+          background-color: $main-color;
         }
       }
+      // &::after {
+      //   position: absolute;
+      //   content: "";
+      //   width: 90%;
+      //   height: 1px;
+      //   top: 0;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   background-color: $main-color;
+      // }
+      // &::before {
+      //   position: absolute;
+      //   content: "";
+      //   width: 90%;
+      //   height: 1px;
+      //   bottom: 0;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      //   background-color: $main-color;
+      // }
       img {
         display: block;
         margin-right: -600px;
@@ -546,7 +642,6 @@ section {
         text-align: center;
       }
       .drawings-mobile {
-        border: 1px solid $main-color;
         border-radius: 5px;
         margin-top: 20px;
       }
