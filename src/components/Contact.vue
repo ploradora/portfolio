@@ -1,15 +1,33 @@
 <template>
-  <section></section>
+  <section id="contact">
+    <p class="section-name-contact">Contact</p>
+  </section>
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default {
   data() {
     return {};
   },
   methods: {},
   computed: {},
-  Mounted() {},
+  mounted() {
+    // let mm = gsap.matchMedia();
+    // mm.add("(max-width: 700px)", () => {});
+    gsap.to(".section-name-contact", {
+      scrollTrigger: {
+        trigger: ".section-name-contact",
+        start: "30px 90%",
+      },
+      x: 0,
+      opacity: 1,
+    });
+  },
 };
 </script>
 
@@ -17,8 +35,18 @@ export default {
 @import "../assets/globalStyles.scss";
 
 section {
+  padding-top: 50px;
   width: 100%;
-  height: 100vh;
-  background-color: royalblue;
+  height: 500px;
+  > p {
+    color: $header-color;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: end;
+    padding-right: 5%;
+    margin-top: 10px;
+    transform: translateX(100px);
+    opacity: 0;
+  }
 }
 </style>

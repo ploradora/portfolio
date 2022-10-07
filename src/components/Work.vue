@@ -1,8 +1,8 @@
 <template>
-  <section>
-    <p>Work</p>
+  <section id="work">
+    <p class="section-name">Work</p>
     <div class="grid-container">
-      <h1>Journal</h1>
+      <h1 class="first-header">Journal</h1>
       <article class="about-journal">
         <p class="p-journal p1-journal">
           <span>Journal</span> is a personal project that started off with small
@@ -56,10 +56,15 @@
       <article class="other-projects">
         <p class="p-projects p1-projects">
           Here are a few selections of exercises made from the
-          <a class="inline-link" href="">frontend mentor’s website</a> . Each of
-          these small projects solves a problem. With tools such as images,
-          icons, colors, fonts and final design looks for each media type
-          already being provided
+          <a
+            class="inline-link"
+            target="_blank"
+            href="https://www.frontendmentor.io/"
+            >frontend mentor’s website</a
+          >
+          . Each of these small projects solves a problem. With tools such as
+          images, icons, colors, fonts and final design looks for each media
+          type already being provided
         </p>
         <p class="p-projects p2-projects">
           I was able to focus entirely on writing the code, getting the projects
@@ -68,7 +73,7 @@
         </p>
       </article>
       <div class="projects-grid">
-        <div class="project-container">
+        <div class="project-container project-1">
           <a
             target="_blank"
             href="https://ecommerce-product-page-main-p7.netlify.app/"
@@ -95,7 +100,7 @@
             </button>
           </div>
         </div>
-        <div class="project-container">
+        <div class="project-container project-2">
           <a
             target="_blank"
             href="https://tip-calculator-app-sebastian.netlify.app/"
@@ -122,7 +127,7 @@
             </button>
           </div>
         </div>
-        <div class="project-container">
+        <div class="project-container project-3">
           <a target="_blank" href="https://todo-app-p9.netlify.app/">
             <img
               src="../assets/images/project-ss/todo-mobile.jpg"
@@ -144,7 +149,7 @@
             </button>
           </div>
         </div>
-        <div class="project-container">
+        <div class="project-container project-4">
           <a
             target="_blank"
             href="https://time-tracking-dashboard-p5.netlify.app/"
@@ -171,7 +176,7 @@
             </button>
           </div>
         </div>
-        <div class="project-container">
+        <div class="project-container project-5">
           <a
             target="_blank"
             href="https://space-tourism-website-main-p8.netlify.app/"
@@ -198,7 +203,7 @@
             </button>
           </div>
         </div>
-        <div class="project-container">
+        <div class="project-container project-6">
           <a
             target="_blank"
             href="https://room-homepage-slider-p6.netlify.app/"
@@ -274,15 +279,186 @@
 
 <script>
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   data() {
     return {};
   },
-  methods: {
-  },
+  methods: {},
   computed: {},
-  mounted() {},
+  mounted() {
+    // window.addEventListener("resize", () => {
+    //   console.log(window.innerWidth);
+    // });
+    let mm = gsap.matchMedia();
+    mm.add("(max-width: 850px)", () => {
+      gsap.to(".first-header", {
+        scrollTrigger: {
+          trigger: ".first-header",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".second-header", {
+        scrollTrigger: {
+          trigger: ".second-header",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".third-header", {
+        scrollTrigger: {
+          trigger: ".third-header",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p1-journal", {
+        scrollTrigger: {
+          trigger: ".p1-journal",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p2-journal", {
+        scrollTrigger: {
+          trigger: ".p2-journal",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p3-journal", {
+        scrollTrigger: {
+          trigger: ".p3-journal",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".journal-container", {
+        scrollTrigger: {
+          trigger: ".journal-container",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p1-projects", {
+        scrollTrigger: {
+          trigger: ".p1-projects",
+          start: "40px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p2-projects", {
+        scrollTrigger: {
+          trigger: ".p2-projects",
+          start: "40px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p-drawings", {
+        scrollTrigger: {
+          trigger: ".p-drawings",
+          start: "30px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+    });
+
+    mm.add("(min-width: 851px)", () => {
+      gsap.to(".first-header", {
+        scrollTrigger: {
+          trigger: ".first-header",
+          start: "10px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".second-header", {
+        scrollTrigger: {
+          trigger: ".second-header",
+          start: "10px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".third-header", {
+        scrollTrigger: {
+          trigger: ".third-header",
+          start: "10px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p-journal", {
+        scrollTrigger: {
+          trigger: ".p-journal",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+      });
+      gsap.to(".journal-container", {
+        scrollTrigger: {
+          trigger: ".journal-container",
+          start: "-35px 90%",
+        },
+        y: 0,
+        opacity: 1,
+      });
+      gsap.to(".p-projects", {
+        scrollTrigger: {
+          trigger: ".p-projects",
+          start: "20px 90%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.25,
+      });
+    });
+
+    gsap.to(".project-container", {
+      scrollTrigger: {
+        trigger: ".project-container",
+        start: "20px 90%",
+      },
+      y: 0,
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.15,
+    });
+    gsap.to(".section-name", {
+      scrollTrigger: {
+        trigger: ".section-name",
+        start: "30px 90%",
+      },
+      x: 0,
+      opacity: 1,
+    });
+    gsap.to(".p-drawings", {
+      scrollTrigger: {
+        trigger: ".p-drawings",
+        start: "30px 90%",
+      },
+      y: 0,
+      opacity: 1,
+    });
+  },
 };
 </script>
 
@@ -291,9 +467,9 @@ export default {
 section {
   position: relative;
   min-height: 100vh;
-  // background-color: cadetblue;
   overflow: hidden;
   font-family: $ff;
+  padding-top: 50px;
   p {
     line-height: normal;
     margin-bottom: 15px;
@@ -307,6 +483,8 @@ section {
     text-align: end;
     padding-right: 5%;
     margin-top: 10px;
+    transform: translateX(100px);
+    opacity: 0;
   }
   .grid-container {
     margin: auto;
@@ -326,16 +504,34 @@ section {
       margin-top: 50px;
       color: $header-color;
     }
+    .first-header,
+    .second-header,
+    .third-header {
+      opacity: 0;
+      transform: translateY(30px);
+    }
     .about-journal {
       margin-top: 30px;
       margin-bottom: 15px;
-      // p {
-      // }
+      p:nth-child(1) {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      p:nth-child(2) {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      p:nth-child(3) {
+        opacity: 0;
+        transform: translateY(30px);
+      }
       p:last-child {
         margin-bottom: unset;
       }
     }
     .journal-container {
+      opacity: 0;
+      transform: translateY(100px);
       .journal-link {
         user-select: none;
         cursor: pointer;
@@ -391,6 +587,8 @@ section {
       font-size: 15px;
       color: $main-color;
       p {
+        opacity: 0;
+        transform: translateY(30px);
         .inline-link {
           position: relative;
           text-decoration: none;
@@ -424,6 +622,8 @@ section {
       gap: 5px;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       .project-container {
+        opacity: 0;
+        transform: translateY(40px);
         position: relative;
         margin-bottom: 20px;
         a {
@@ -482,6 +682,8 @@ section {
       text-align: center;
     }
     .p-drawings {
+      opacity: 0;
+      transform: translateY(30px);
       margin: auto;
       margin-top: 20px;
       padding-bottom: 700px;
@@ -549,6 +751,7 @@ section {
   @include mobile-end {
     // display: grid;
     // grid-template-columns: 40% 1fr;
+    padding-top: unset;
     > p {
       padding-right: 10px;
     }
@@ -627,7 +830,6 @@ section {
         margin-top: 30px;
         width: 100%;
         max-width: 900px;
-        // grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       }
       .third-header {
         margin-top: 60px;

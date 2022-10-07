@@ -25,7 +25,7 @@ $main-color: rgb(110, 110, 110);
   }
 }
 @mixin tablet-end {
-  @media only screen and (min-width: 850px) {
+  @media only screen and (min-width: 851px) {
     @content;
   }
 }
@@ -42,6 +42,7 @@ $main-color: rgb(110, 110, 110);
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *::after,

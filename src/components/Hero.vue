@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article id="home">
     <transition
       appear
       @before-enter="beforeImageContainer"
@@ -1230,18 +1230,12 @@ l90 0 0 30 c0 17 5 30 10 30 6 0 10 55 10 145 0 90 -4 145 -10 145 -6 0 -10
 <script>
 import gsap from "gsap";
 export default {
-  components: {},
-  data() {
-    return {};
-  },
   methods: {
     beforeImageContainer(el) {
       el.style.opacity = 0;
-      el.style.height = 0;
     },
     enterImageContainer(el, done) {
       gsap.to(el, {
-        height: "calc(100% - 55px)",
         opacity: 1,
         duration: 1,
         delay: 0.3,
@@ -1273,8 +1267,6 @@ export default {
       });
     },
   },
-  computed: {},
-  mounted() {},
 };
 </script>
 
@@ -1285,7 +1277,6 @@ article {
   position: relative;
   margin: auto;
   width: 90%;
-  // height: 300px;
   height: calc(100vh - 20px);
   .image-container {
     position: absolute;
@@ -1358,13 +1349,10 @@ article {
         font-size: clamp(2vw, 10.3vw, 160px);
         letter-spacing: -4px;
         margin-bottom: -22px;
-        // transform: translateY(63%);
       }
     }
   }
   @include desktop-large {
-    // padding-top: 80px;
-    // height: calc(100vh - 20px);
     .image-container {
       height: calc(100% - 50px);
     }

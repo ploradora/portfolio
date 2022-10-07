@@ -1,8 +1,9 @@
 <template>
-  <section>
-    <p>About</p>
+  <section id="about">
+    <p class="section-name-about">About</p>
     <div class="content-wrapper">
       <svg
+        class="svg"
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         width="5614.000000pt"
@@ -723,7 +724,7 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
         </g>
       </svg>
       <article>
-        <p class="p1-about">
+        <p class="p-about p1">
           I was surrounded, for as long as I can remember, by people with a
           strong passion for the visual arts. Whether it was a good movie,
           painting, piece of clothing, piece of furniture, drawing, there was
@@ -732,20 +733,20 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
           academical route studying architecture in high school and getting my
           BA degree in design.
         </p>
-        <p class="p2-about">
+        <p class="p-about p2">
           The interest towards <span>web development</span> came at the
           suggestion of a few close friends that are working in the industry.
           The idea of being able to combine any art form with the help of code
           was quite appealing and new. So I started taking a few introductory
           courses on the topic, and very quiqly I was hooked.
         </p>
-        <p class="p3-about">
+        <p class="p-about p3">
           After becoming comfortable enough with my basic knowledge and googling
           skills, I started creating my personal projects. Along the way it made
           me realize that the result of merging these two fileds, programming
           and visual arts, is something that I really enjoy doing.
         </p>
-        <p class="p4-about">
+        <p class="p-about p4">
           On the weekends you can also find me playing tennis and loosing,
           swimming and trying to beat the 100m world record (not even close),
           ballroom dancing and praying not to step on my partner’s feet, or on
@@ -757,13 +758,57 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default {
-  data() {
-    return {};
+  mounted() {
+    let mm = gsap.matchMedia();
+    mm.add("(max-width: 700px)", () => {
+      gsap.to(".p-about", {
+        scrollTrigger: {
+          trigger: ".p-about",
+          start: "10px 90%",
+        },
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+      });
+    });
+    mm.add("(min-width: 700px)", () => {
+      gsap.to(".p-about", {
+        scrollTrigger: {
+          trigger: ".p-about",
+          start: "10px 70%",
+        },
+        x: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+      });
+    });
+
+    gsap.to(".svg", {
+      scrollTrigger: {
+        trigger: ".svg",
+        start: "20px 90%",
+      },
+      y: 0,
+      opacity: 1,
+    });
+
+    gsap.to(".section-name-about", {
+      scrollTrigger: {
+        trigger: ".section-name-about",
+        start: "30px 90%",
+      },
+      x: 0,
+      opacity: 1,
+    });
   },
-  methods: {},
-  computed: {},
-  Mounted() {},
 };
 </script>
 
@@ -773,6 +818,7 @@ export default {
 section {
   position: relative;
   width: 100%;
+  padding-top: 50px;
   p {
     line-height: normal;
     margin-bottom: 15px;
@@ -780,23 +826,21 @@ section {
     color: $main-color;
   }
   > p {
+    opacity: 0;
+    transform: translateX(100px);
     color: $header-color;
     font-size: 17px;
     font-weight: 500;
     text-align: end;
     padding-right: 10px;
-    margin-top: 70px;
+    margin-top: 10px;
   }
   .content-wrapper {
-    // position: absolute;
-    // left: 50%;
-    // top: 40px;
-    // transform: translateX(-50%);
-    // width: 107%;
     svg {
+      opacity: 0;
+      transform: scale(1.05) translateY(40px);
       width: 100%;
       height: auto;
-      transform: scale(1.05);
       g {
         fill: $blue;
       }
@@ -808,6 +852,8 @@ section {
       color: $main-color;
       padding-left: 20%;
       p {
+        opacity: 0;
+        transform: translateX(-30px);
         margin-bottom: 20px;
         max-width: 350px;
         span {
@@ -847,6 +893,12 @@ section {
         padding-top: 430px;
         padding-left: 39%;
       }
+    }
+  }
+  @include mobile-end {
+    padding-top: unset;
+    > p {
+      padding-top: 10px;
     }
   }
 }

@@ -4,9 +4,9 @@
     <Hero />
   </header>
   <main>
-    <Work />
-    <About />
-    <Contact />
+      <Work />
+      <About />
+      <Contact />
   </main>
 </template>
 
@@ -28,7 +28,9 @@ export default {
     Contact,
   },
   data() {
-    return {};
+    return {
+      currentSection: "",
+    };
   },
   methods: {
     // beforeEnterNav(el) {
@@ -45,7 +47,8 @@ export default {
     // },
   },
   computed: {},
-  mounted() {},
+  mounted() {
+  },
 };
 </script>
 
