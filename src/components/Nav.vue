@@ -88,7 +88,6 @@ nav {
       border: unset;
       background-color: unset;
       font-family: $ff;
-      font-weight: 500;
       font-size: 14px;
       padding: 5px 12px 15px 12px;
       opacity: 0;

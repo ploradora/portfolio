@@ -1,7 +1,16 @@
 <template>
-  <section id="contact">
+  <footer id="contact">
     <p class="section-name-contact">Contact</p>
-  </section>
+    <span class="material-symbols-outlined">expand_less</span>
+    <div class="content">
+      <div class="contact-info">
+        
+      </div>
+      <div class="image-container">
+
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -11,14 +20,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
-  data() {
-    return {};
-  },
-  methods: {},
-  computed: {},
   mounted() {
-    // let mm = gsap.matchMedia();
-    // mm.add("(max-width: 700px)", () => {});
     gsap.to(".section-name-contact", {
       scrollTrigger: {
         trigger: ".section-name-contact",
@@ -34,7 +36,7 @@ export default {
 <style scoped lang="scss">
 @import "../assets/globalStyles.scss";
 
-section {
+footer {
   padding-top: 50px;
   width: 100%;
   height: 500px;
@@ -47,6 +49,9 @@ section {
     margin-top: 10px;
     transform: translateX(100px);
     opacity: 0;
+  }
+  > p {
+    padding-right: 10px;
   }
 }
 </style>

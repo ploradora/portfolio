@@ -901,5 +901,11 @@ section {
       padding-top: 10px;
     }
   }
+  @include desktop-large {
+    padding-top: unset;
+    > p {
+      padding-top: 50px;
+    }
+  }
 }
 </style>

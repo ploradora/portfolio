@@ -1,18 +1,24 @@
 <template>
   <Nav />
   <header>
-    <Hero />
+    <div class="component">
+      <Hero />
+    </div>
   </header>
-  <main>
+  <main class="mains">
+    <div class="component">
       <Work />
+    </div>
+    <div class="component">
       <About />
+    </div>
+    <div class="component">
       <Contact />
+    </div>
   </main>
 </template>
 
 <script>
-// import { gsap } from "gsap";
-
 import Nav from "./components/Nav.vue";
 import Hero from "./components/Hero.vue";
 import Work from "./components/Work.vue";
@@ -32,22 +38,8 @@ export default {
       currentSection: "",
     };
   },
-  methods: {
-    // beforeEnterNav(el) {
-    //   el.style.opacity = 0;
-    //   el.style.transform = "translateY(-35px)";
-    // },
-    // enterNav(el, done) {
-    //   gsap.to(el, {
-    //     opacity: 1,
-    //     duration: 1,
-    //     y: 0,
-    //     onComplete: done,
-    //   });
-    // },
-  },
-  computed: {},
   mounted() {
+   
   },
 };
 </script>
@@ -73,11 +65,6 @@ main {
     margin-left: auto;
     width: calc(100% - 72px);
   }
-  @include desktop-enter {
-    // margin-left: unset;
-    // margin: auto;
-    // width: ;
-  }
   @include desktop-large {
     margin: auto;
     width: 100%;
@@ -85,21 +72,3 @@ main {
   }
 }
 </style>
-
-<!-- <template>
-</template>
-
-<script>
-export default {
-  data() {
-    return {};
-  },
-  methods: {},
-  computed: {},
-  Mounted() {},
-};
-</script>
-
-<style scoped lang="scss">
-@import './assets/globalStyles.scss';
-</style> -->

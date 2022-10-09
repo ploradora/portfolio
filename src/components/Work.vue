@@ -236,42 +236,11 @@
         The following is a selection of a few digital drawings made over the
         last couple of months on Procreate.
       </p>
-      <!-- <div class="drawings-slide">
-        <img
-          src="../assets/images/grey-man-1.jpg"
-          alt="digital portrait of a man"
-        />
-        <img
-          src="../assets/images/ben-kitty.jpg"
-          alt="digital portrait of benjamin franklin"
-        />
-        <img
-          src="../assets/images/blue-lady.jpg"
-          alt="digital portrait of an old woman"
-        />
-        <img
-          src="../assets/images/cowboys.jpg"
-          alt="digital portrait of a man wearing a hat"
-        />
-        <img
-          src="../assets/images/green-cowboys.jpg"
-          alt="digital portrait of a man wearing a hat"
-        />
-        <img
-          src="../assets/images/purple-girl.jpg"
-          alt="digital portrait of an young girl"
-        />
-        <img
-          src="../assets/images/sketch-detail.jpg"
-          alt="digital portrait of woman's profile"
-        />
-        <img
-          src="../assets/images/yellow-lady.jpg"
-          alt="digital portrait of a Hollywood actress"
-        />
-      </div> -->
-      <div class="drawings-mobile">
-        <img src="../assets/images/mobile-slide-collage.jpg" alt="" />
+      <div class="drawings-slide-container">
+        <span class="material-symbols-outlined arrow-forward">
+          arrow_forward
+        </span>
+        <img src="../assets/images/image-slide.jpg" alt="" />
       </div>
     </div>
   </section>
@@ -290,9 +259,6 @@ export default {
   methods: {},
   computed: {},
   mounted() {
-    // window.addEventListener("resize", () => {
-    //   console.log(window.innerWidth);
-    // });
     let mm = gsap.matchMedia();
     mm.add("(max-width: 850px)", () => {
       gsap.to(".first-header", {
@@ -489,16 +455,6 @@ section {
   .grid-container {
     margin: auto;
     width: 90%;
-    // .drawings-slide {
-    //   position: absolute;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   height: 80vh;
-    //   overflow: auto;
-    //   overflow-y: hidden;
-    //   white-space: nowrap;
-    // }
     h1 {
       font-size: 40px;
       margin-top: 50px;
@@ -636,18 +592,15 @@ section {
             border-radius: 4px;
             object-fit: cover;
             object-position: center;
-            // border: 1px solid $header-color;
             transition: all 0.15s ease-in-out;
             &:hover {
               box-shadow: 0px 3px 3px 1px rgba(70, 70, 70, 0.18);
-              // transform: scale(1.001);
               transition: all 0.15s ease-in-out;
             }
           }
         }
         .buttons {
           padding-top: 8px;
-          // height: 32.4px;
           button {
             background-color: unset;
             height: 30px;
@@ -686,71 +639,99 @@ section {
       transform: translateY(30px);
       margin: auto;
       margin-top: 20px;
-      padding-bottom: 700px;
+      padding-bottom: 420px;
       width: 90%;
       max-width: 380px;
       text-align: center;
     }
-    .drawings-mobile {
+    .drawings-slide-container {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       width: 100%;
-      height: 671px;
+      height: 400px;
+      border-top: 1px solid lighten($main-color, 20%);
+      border-bottom: 1px solid lighten($main-color, 20%);
       overflow-y: hidden;
       overflow-x: scroll;
       &::-webkit-scrollbar {
         background-color: $main-background;
-        height: 5px;
+        height: 20px;
       }
-      &::-webkit-scrollbar-track {
-        margin-left: 25px;
-        margin-right: 25px;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: lighten($main-color, 20%);
-        border-radius: 20px;
-        &:hover {
-          background-color: $main-color;
+      &:hover {
+        &::-webkit-scrollbar {
+          background-color: $main-background;
+          height: 20px;
+        }
+        &::-webkit-scrollbar-track {
+          margin-left: 6px;
+          margin-right: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: lighten($main-color, 20%);
+          border-radius: 20px;
+          border: 7px solid $main-background;
+          &:hover {
+            background-color: $main-color;
+          }
         }
       }
-      // &::after {
-      //   position: absolute;
-      //   content: "";
-      //   width: 90%;
-      //   height: 1px;
-      //   top: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   background-color: $main-color;
-      // }
-      // &::before {
-      //   position: absolute;
-      //   content: "";
-      //   width: 90%;
-      //   height: 1px;
-      //   bottom: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   background-color: $main-color;
-      // }
+      span {
+        position: absolute;
+        left: 13px;
+        top: 20px;
+        user-select: none;
+        color: lighten($main-color, 20%);
+        animation: arrow 4s linear infinite;
+        @keyframes arrow {
+          0% {
+            transform: translateX(0);
+          }
+          10% {
+            transform: translateX(10px);
+          }
+          20% {
+            transform: translateX(0);
+          }
+        }
+      }
       img {
         display: block;
-        margin-right: -600px;
-        // overflow-x: auto;
+        height: 100%;
+      }
+    }
+    @media only screen and (min-width: 375px) {
+      .p-drawings {
+        padding-bottom: 580px;
+      }
+      .drawings-slide-container {
+        height: 550px;
+      }
+    }
+    @media only screen and (min-width: 450px) {
+      .p-drawings {
+        padding-bottom: 630px;
+      }
+      .drawings-slide-container {
+        height: 600px;
+      }
+    }
+    @media only screen and (min-width: 1600px) {
+      .p-drawings {
+        padding-bottom: 790px;
+      }
+      .drawings-slide-container {
+        height: 750px;
+        border-radius: 7px;
+        border: 1px solid lighten($main-color, 20%);
+        &::-webkit-scrollbar {
+          border-radius: 7px;
+        }
       }
     }
   }
-  // img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  //   object-position: center center;
-  // }
   @include mobile-end {
-    // display: grid;
-    // grid-template-columns: 40% 1fr;
     padding-top: unset;
     > p {
       padding-right: 10px;
@@ -843,8 +824,7 @@ section {
         width: 400px;
         text-align: center;
       }
-      .drawings-mobile {
-        border-radius: 5px;
+      .drawings-slide-container {
         margin-top: 20px;
       }
     }
@@ -852,8 +832,14 @@ section {
   @include desktop-enter {
     .grid-container {
       width: 85%;
-      .about-journal {
-      }
+    }
+  }
+  @include desktop-large {
+    > p {
+      margin-top: 50px;
+    }
+    .grid-container {
+      width: 85%;
     }
   }
 }

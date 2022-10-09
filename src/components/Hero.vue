@@ -1330,8 +1330,6 @@ article {
     }
   }
   @include tablet-end {
-    .image-container {
-    }
     .name {
       h1 {
         margin-top: 15px;
@@ -1341,8 +1339,6 @@ article {
     }
   }
   @include desktop-enter {
-    .image-container {
-    }
     .name {
       h1 {
         text-align: center;
