@@ -737,8 +737,6 @@ section {
       padding-right: 10px;
     }
     .grid-container {
-      margin: auto;
-      width: 90%;
       h1 {
         font-size: clamp(2vw, 45px, 4vw);
       }
@@ -747,7 +745,6 @@ section {
   @include tablet-end {
     margin: auto;
     .grid-container {
-      width: 90%;
       margin-top: 65px;
       h1:first-child {
         margin-top: 30px;

@@ -5,7 +5,9 @@
       @before-enter="beforeImageContainer"
       @enter="enterImageContainer"
     >
-      <div class="image-container"></div>
+      <div class="image-container">
+        <img src="../assets/images/self-illustration.jpg" alt="" />
+      </div>
     </transition>
     <div class="info">
       <transition appear @before-enter="beforeName" @enter="enterName">
@@ -1277,19 +1279,26 @@ article {
   position: relative;
   margin: auto;
   width: 90%;
-  height: calc(100vh - 20px);
+  height: calc(100vh - 10px);
   .image-container {
     position: absolute;
-    height: calc(100% - 50px);
+    height: calc(100% - 55px);
     width: 100%;
     bottom: 0;
+    overflow: hidden;
     z-index: -1;
     border-radius: 6px;
-    background-color: rgb(214, 177, 127);
+    img {
+      user-select: none;
+      object-fit: cover;
+      object-position: center right;
+      height: 100%;
+      width: 100%;
+    }
   }
   .info {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -1297,8 +1306,9 @@ article {
     h1 {
       user-select: none;
       font-family: $ff-header;
-      font-size: clamp(3vw, 41px, 6.5vw);
+      font-size: clamp(3vw, 65px, 8vw);
       text-align: center;
+      color: #fff;
       z-index: 10;
     }
     svg {
@@ -1306,10 +1316,10 @@ article {
       left: 50%;
       transform: translateX(-50%);
       width: 80%;
-      max-width: 350px;
+      max-width: 450px;
       height: auto;
       g {
-        fill: rgb(7, 81, 167);
+        fill: #fff;
       }
     }
   }
@@ -1321,36 +1331,37 @@ article {
       transform: translateX(-50%);
       height: calc(100% - 10px);
       width: calc(100% - 20px);
-    }
-    .name {
-      h1 {
-        font-size: clamp(2vw, 8vw, 100px);
-        letter-spacing: -2px;
+      img {
+        object-position: right 25%;
       }
     }
   }
   @include tablet-end {
-    .name {
+    .info {
+      bottom: 13%;
       h1 {
-        margin-top: 15px;
-        font-size: clamp(2vw, 50px, 9vw);
-        letter-spacing: -2px;
+        margin-bottom: -10px;
       }
     }
   }
   @include desktop-enter {
-    .name {
+    .image-container {
+      img {
+        object-position: right center;
+      }
+    }
+    .info {
       h1 {
-        text-align: center;
-        font-size: clamp(2vw, 10.3vw, 160px);
-        letter-spacing: -4px;
-        margin-bottom: -22px;
+        font-size: clamp(3vw, 80px, 8vw);
       }
     }
   }
   @include desktop-large {
     .image-container {
       height: calc(100% - 50px);
+      img {
+        object-position: center center;
+      }
     }
   }
 }

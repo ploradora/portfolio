@@ -1,14 +1,35 @@
 <template>
   <footer id="contact">
     <p class="section-name-contact">Contact</p>
-    <span class="material-symbols-outlined">expand_less</span>
+    <!-- <span class="material-symbols-outlined">expand_less</span> -->
     <div class="content">
       <div class="contact-info">
-        
+        <p>Email: suciu.seb@gmail.com</p>
+        <div class="socials">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/sebastian-suciu-b54b85206/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.behance.net/gallery/108658421/MCMLXI"
+            ><i class="fa-brands fa-behance"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/febabian/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/watch?v=Z9djQBHojzg&t=XmYs&ab_channel=Ploradora"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a target="_blank" href="https://soundcloud.com/ploradora"
+            ><i class="fa-brands fa-soundcloud"></i
+          ></a>
+        </div>
       </div>
-      <div class="image-container">
-
-      </div>
+      <div class="image-container"></div>
     </div>
   </footer>
 </template>
@@ -37,21 +58,53 @@ export default {
 @import "../assets/globalStyles.scss";
 
 footer {
-  padding-top: 50px;
+  padding-top: 10px;
   width: 100%;
-  height: 500px;
+  height: calc(100vh - 46px);
   > p {
+    padding-right: 10px;
     color: $header-color;
     font-size: 17px;
     font-weight: 500;
     text-align: end;
     padding-right: 5%;
-    margin-top: 10px;
     transform: translateX(100px);
     opacity: 0;
   }
-  > p {
-    padding-right: 10px;
+  .content {
+    margin: auto;
+    width: 90%;
+    .contact-info {
+      padding-top: 100px;
+      p {
+        line-height: normal;
+        margin-bottom: 15px;
+        font-size: 15px;
+        color: darken($main-color, 15%);
+      }
+      .socials {
+        a {
+          color: $main-color;
+          padding: 5px;
+          font-size: 22px;
+          &:hover {
+            color: darken($main-color, 10%);
+          }
+        }
+      }
+    }
+  }
+  @include mobile-end {
+    height: 100vh;
+    > p {
+      padding-right: 10px;
+    }
+    .content {
+      width: calc(100% - 20px);
+    }
+  }
+  @include desktop-large {
+    
   }
 }
 </style>

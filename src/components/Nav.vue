@@ -1,10 +1,10 @@
 <template>
   <nav>
     <div class="links">
-      <a class="link" href="#home"><button class="btns">Home</button></a>
-      <a class="link" href="#work"><button class="btns">Work</button></a>
-      <a class="link" href="#about"><button class="btns">About</button></a>
-      <a class="link" href="#contact"><button class="btns">Contact</button></a>
+      <a href="#home"><button class="btns">Home</button></a>
+      <a href="#work"><button class="btns">Work</button></a>
+      <a href="#about"><button class="btns">About</button></a>
+      <a href="#contact"><button class="btns">Contact</button></a>
     </div>
   </nav>
 </template>
@@ -75,11 +75,20 @@ nav {
   width: 100%;
   font-family: $ff;
   background-color: $main-background;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 1px;
+    background-color: lighten($header-color, 20%);
+  }
   .links {
     margin: auto;
     padding-top: 10px;
-    width: 100%;
-    max-width: 250px;
+    width: 90%;
+    max-width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,7 +97,7 @@ nav {
       border: unset;
       background-color: unset;
       font-family: $ff;
-      font-size: 14px;
+      font-size: 16px;
       padding: 5px 12px 15px 12px;
       opacity: 0;
       transform: translateY(-40px);
@@ -117,10 +126,22 @@ nav {
     }
   }
   @include mobile-end {
+    border-bottom: unset;
     position: relative;
+    &::after {
+      position: unset;
+      content: unset;
+      left: unset;
+      transform: unset;
+      width: unset;
+      height: unset;
+      background-color: unset;
+    }
     .links {
       padding: unset;
       position: fixed;
+      width: 100%;
+      max-width: 250px;
       height: 100vh;
       margin: unset;
       display: block;
@@ -134,9 +155,11 @@ nav {
         .btns {
           transform: unset;
           padding: 4px 0;
+          font-size: 14px;
           transform: translateX(-70px);
           opacity: 0;
           margin-left: auto;
+          margin-bottom: 10px;
           display: block;
           &::after {
             top: 50%;

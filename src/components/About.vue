@@ -747,12 +747,12 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
           and visual arts, is something that I really enjoy doing.
         </p>
         <p class="p-about p4">
-          On the weekends you can also find me playing tennis and loosing,
-          swimming and trying to beat the 100m world record (not even close),
-          ballroom dancing and praying not to step on my partner’s feet, or on
-          an adventurous day, hiking.
+          On the weekends you can also find me playing tennis, swimming, making music, filming, or on an adventurous day, hiking.
         </p>
       </article>
+      <div class="resume-container">
+        <!-- downaload icon -->
+      </div>
     </div>
   </section>
 </template>
