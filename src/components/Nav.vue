@@ -114,7 +114,7 @@ nav {
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background-color: $blue;
+        background-color: darken($footer-brown, 30%);
       }
       &:hover {
         &:after {
@@ -164,12 +164,7 @@ nav {
           &::after {
             top: 50%;
             left: 0;
-            opacity: 0;
             transform: translateY(-50%);
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background-color: $blue;
           }
           &:hover {
             &::after {

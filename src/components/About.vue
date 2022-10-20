@@ -841,7 +841,7 @@ section {
     margin-top: 10px;
   }
   .content-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     svg {
       opacity: 0;
       transform: scale(1.05) translateY(40px);
