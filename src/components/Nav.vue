@@ -148,7 +148,7 @@ nav {
       background-color: $main-background;
       width: 72px;
       padding-right: 7px;
-      padding-top: 15px;
+      padding-top: 6px;
       border-right: 1px solid lighten($header-color, 20%);
       a {
         text-decoration: none;
@@ -159,7 +159,7 @@ nav {
           transform: translateX(-70px);
           opacity: 0;
           margin-left: auto;
-          margin-bottom: 10px;
+          margin-bottom: 3px;
           display: block;
           &::after {
             top: 50%;
@@ -183,11 +183,19 @@ nav {
     }
   }
   @include desktop-large {
-    // max-width: 1700px;
     position: fixed;
     height: 44px;
     width: 100%;
     background-color: $main-background;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1680px;
+      height: 1px;
+      background-color: lighten($header-color, 20%);
+    }
     .links {
       border: unset;
       position: relative;

@@ -514,21 +514,21 @@ section {
           height: 30px;
           margin-right: 5px;
           border-radius: 3px;
-          border: 2px solid $green3;
+          border: 2px solid $green1;
           font-family: $ff;
           font-size: 15px;
           font-weight: 500;
           cursor: pointer;
           transition: all 0.15s ease-in-out;
           &:hover {
-            background-color: darken($green3, 10%);
-            border-color: darken($green3, 10%);
+            background-color: darken($green1, 10%);
+            border-color: darken($green1, 10%);
             transition: all 0.15s ease-in-out;
           }
           a {
             text-decoration: none;
             padding: 7px 15px;
-            color: $green4;
+            color: $green2;
             transition: all 0.15s ease-in-out;
             &:hover {
               color: $main-background;
@@ -606,21 +606,21 @@ section {
             height: 30px;
             margin-right: 5px;
             border-radius: 3px;
-            border: 2px solid $green3;
+            border: 2px solid $green1;
             font-family: $ff;
             font-size: 15px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.15s ease-in-out;
             &:hover {
-              background-color: darken($green3, 10%);
-              border-color: darken($green3, 10%);
+              background-color: darken($green1, 10%);
+              border-color: darken($green1, 10%);
               transition: all 0.15s ease-in-out;
             }
             a {
               text-decoration: none;
               padding: 7px 15px;
-              color: $green4;
+              color: $green2;
               transition: all 0.15s ease-in-out;
               &:hover {
                 color: $main-background;

@@ -59,8 +59,8 @@ export default {
 
 footer {
   padding-top: 10px;
+  padding-bottom: 30px;
   width: 100%;
-  height: calc(100vh - 46px);
   > p {
     padding-right: 10px;
     color: $header-color;
@@ -78,15 +78,19 @@ footer {
       padding-top: 100px;
       p {
         line-height: normal;
+        font-weight: 500;
         margin-bottom: 15px;
         font-size: 15px;
         color: darken($main-color, 15%);
       }
       .socials {
+        a:first-child {
+          padding-left: unset;
+        }
         a {
           color: $main-color;
           padding: 5px;
-          font-size: 22px;
+          font-size: 26px;
           &:hover {
             color: darken($main-color, 10%);
           }
@@ -95,7 +99,7 @@ footer {
     }
   }
   @include mobile-end {
-    height: 100vh;
+    // height: 100vh;
     > p {
       padding-right: 10px;
     }
@@ -104,7 +108,9 @@ footer {
     }
   }
   @include desktop-large {
-    
+    > p {
+      padding-top: 40px;
+    }
   }
 }
 </style>

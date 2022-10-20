@@ -747,12 +747,17 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
           and visual arts, is something that I really enjoy doing.
         </p>
         <p class="p-about p4">
-          On the weekends you can also find me playing tennis, swimming, making music, filming, or on an adventurous day, hiking.
+          On the weekends you can also find me playing tennis, swimming, making
+          music, filming, or on an adventurous day, hiking.
         </p>
+        <a
+          href="https://storage.googleapis.com/sebastian-suciu/SebastianSuciu%20-%20CV.pdf"
+          target="_blank"
+          class="resume p-about"
+        >
+          Resume
+        </a>
       </article>
-      <div class="resume-container">
-        <!-- downaload icon -->
-      </div>
     </div>
   </section>
 </template>
@@ -832,10 +837,11 @@ section {
     font-size: 17px;
     font-weight: 500;
     text-align: end;
-    padding-right: 10px;
+    padding-right: 5%;
     margin-top: 10px;
   }
   .content-wrapper {
+    margin-bottom: 20px;
     svg {
       opacity: 0;
       transform: scale(1.05) translateY(40px);
@@ -859,6 +865,26 @@ section {
         span {
           color: $blue;
           font-weight: 500;
+        }
+      }
+      .resume {
+        background-color: unset;
+        opacity: 0;
+        transform: translateX(-30px);
+        padding: 5px 15px;
+        border-radius: 5px;
+        border: 2px solid rgb(184, 160, 143);
+        font-family: $ff;
+        font-size: 15px;
+        font-weight: 500;
+        color: rgb(148, 125, 109);
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          color: #fff;
+          background-color: rgb(145, 119, 99);
+          background-color: rgb(184, 160, 143);
+          transition: all 0.15s ease-in-out;
         }
       }
       @media only screen and (min-width: 400px) {
@@ -899,6 +925,7 @@ section {
     padding-top: unset;
     > p {
       padding-top: 10px;
+      padding-right: 10px;
     }
   }
   @include desktop-large {
