@@ -1,7 +1,6 @@
 <template>
   <footer id="contact">
     <p class="section-name-contact">Contact</p>
-    <!-- <span class="material-symbols-outlined">expand_less</span> -->
     <div class="content">
       <div class="contact-info">
         <div class="mail">

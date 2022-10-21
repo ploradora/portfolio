@@ -234,13 +234,20 @@
       <h1 class="third-header">Drawings</h1>
       <p class="p-drawings">
         The following is a selection of a few digital drawings made over the
-        last couple of months on Procreate.
+        last couple of months in Procreate.
       </p>
       <div class="drawings-slide-container">
-        <span class="material-symbols-outlined arrow-forward">
+        <span
+          @click="imageScroll"
+          class="material-symbols-outlined arrow-forward"
+        >
           arrow_forward
         </span>
-        <img src="../assets/images/image-slide.jpg" alt="" />
+        <img
+          class="image-collage"
+          src="../assets/images/image-slide.jpg"
+          alt=""
+        />
       </div>
     </div>
   </section>
@@ -253,11 +260,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
-  data() {
-    return {};
+  methods: {
+    imageScroll() {
+      const image = document.querySelector(".image-collage");
+      const container = document.querySelector(".drawings-slide-container");
+      container.scrollLeft += image.clientWidth;
+    },
   },
-  methods: {},
-  computed: {},
   mounted() {
     let mm = gsap.matchMedia();
     mm.add("(max-width: 850px)", () => {
@@ -653,6 +662,7 @@ section {
       height: 400px;
       border-top: 1px solid lighten($main-color, 20%);
       border-bottom: 1px solid lighten($main-color, 20%);
+      scroll-behavior: smooth;
       overflow-y: hidden;
       overflow-x: scroll;
       &::-webkit-scrollbar {
@@ -683,6 +693,7 @@ section {
         top: 20px;
         user-select: none;
         color: lighten($main-color, 20%);
+        cursor: pointer;
         animation: arrow 4s linear infinite;
         @keyframes arrow {
           0% {
