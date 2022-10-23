@@ -749,12 +749,12 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
           development started to become more and more persistent.
         </p>
         <p class="p-about p4">
-          Whilst during week days I'm in front of a laptop playing with code,
-          on the weekends you can find me playing tennis, swimming, making
-          music, filming, or on an adventurous day, hiking.
+          Whilst during week days I'm in front of a laptop playing with code, on
+          the weekends you can find me playing tennis, swimming, making music,
+          filming, or on an adventurous day, hiking.
         </p>
         <a
-          href="https://storage.googleapis.com/sebastian-suciu/SebastianSuciu%20-%20CV.pdf"
+          href="https://storage.googleapis.com/sebastian-suciu/Sebastian%20Suciu%20-%20resume.pdf"
           target="_blank"
           class="resume p-about"
         >
