@@ -10,7 +10,7 @@
           same time. My main focus was to build a project that would combine the
           exercises I have completed in the past few months whilst taking
           JavaScript, Vue JS and Firebase courses. The idea of a journal app
-          came about after watching the docu series on Andy Warhol’s life based
+          came about after watching the docu-series on Andy Warhol’s life based
           on its diaries he kept in his later years.
         </p>
         <p class="p-journal p2-journal">
