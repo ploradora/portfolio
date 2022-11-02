@@ -754,7 +754,7 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
           filming, or on an adventurous day, hiking.
         </p>
         <a
-          href="https://storage.googleapis.com/sebastian-suciu/Sebastian%20Suciu%20-%20resume.pdf"
+          href="https://storage.googleapis.com/sebastian-suciu/Sebastian%20Suciu%20-%20resume.pdf" 
           target="_blank"
           class="resume p-about"
         >
