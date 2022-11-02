@@ -725,31 +725,31 @@ c-22 -77 -80 -228 -105 -276 -17 -32 -50 -97 -74 -147 -64 -134 -186 -315
       </svg>
       <article>
         <p class="p-about p1">
-          I was surrounded, for as long as I can remember, by people with a
+         I was surrounded, for as long as I can remember, by people with a
           strong passion for the visual arts. Whether it was a good movie,
-          painting, piece of clothing, piece of furniture, drawing, very often
+          painting, clothing item, piece of furniture, drawing, very often
           the general conversations gravitated towards that field. It came as no
           surprise when in later years, as my love for art grew as well, I took
-          the academical route, I went on to study architecture in high school
-          and getting my BA degree in design.
+          the academic route, I went on to study architecture in high school
+          and got my BA degree in design.
         </p>
         <p class="p-about p2">
           The interest towards <span>web development</span> came at the
           suggestion of a few close friends that are working in the industry.
           The idea of being able to combine any art form with the help of code
           was quite appealing and new. So, I started taking a few introductory
-          courses on the topic, and very quiqly I was hooked.
+          courses on the topic, and very quickly I was hooked.
         </p>
         <p class="p-about p3">
           After becoming comfortable enough with my basic knowledge in HTML5,
           CSS3, JS6, VUE 3 and googling skills, I started creating my personal
           projects. Along the way it made me realize that the result of merging
           these two fields, programming and visual arts, is something that I
-          really enjoy doing. Therefore, the desire of having a career in web
+          really enjoy doing. Therefore, the desire to have a career in web
           development started to become more and more persistent.
         </p>
         <p class="p-about p4">
-          Whilst during week days I'm in front of a laptop playing with code, on
+          Whilst during weekdays I'm in front of a laptop playing with code, on
           the weekends you can find me playing tennis, swimming, making music,
           filming, or on an adventurous day, hiking.
         </p>
